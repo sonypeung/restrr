@@ -1,6 +1,9 @@
 <ion-content padding>
 
-  
+  <ion-item color="dark">
+    <ion-label>Rest Duration</ion-label>
+    <ion-datetime display-format="mm:ss" placeholder="Tap here" [(ngModel)]="fullTime"></ion-datetime>
+  </ion-item>
 
   <circle-progress (click)="startTime()"
     [percent]="percent"
@@ -17,4 +20,7 @@
     [outerStrokeGradientStopColor]="'#FF00CB'"
     [showInnerStroke]="false"
     ></circle-progress>
-</ion-content>
+
+    <p>{{ elapsed.h }}:{{ elapsed.m }}:{{ elapsed.s }}</p>
+
+  </ion-content>
